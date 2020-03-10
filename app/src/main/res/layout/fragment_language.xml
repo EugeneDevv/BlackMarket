@@ -1,0 +1,119 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- Start Language Design -->
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@color/global__primary" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/gallery_img__desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                app:srcCompat="@drawable/login_app_logo" />
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="35dp" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/app__app_name"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                app:font='@{"bold"}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:textSize='@{"font_h6_size"}' />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="@dimen/space_16"
+                android:layout_marginRight="@dimen/space_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <RadioButton
+                    android:id="@+id/englishRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:checked="false"
+                    android:text="@string/language__english"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text__primary"
+                    app:font='@{"normal"}'
+                    app:textSize='@{"font_title_size"}' />
+
+                <RadioButton
+                    android:id="@+id/arabicRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_weight="0.13"
+                    android:checked="false"
+                    android:text="@string/language__arabic"
+                    app:font='@{"normal"}'
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text__primary"
+                    app:textSize='@{"font_title_size"}' />
+
+                <RadioButton
+                    android:id="@+id/spanishRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_weight="0.13"
+                    android:checked="false"
+                    android:text="@string/language__spanish"
+                    app:font='@{"normal"}'
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text__primary"
+                    app:textSize='@{"font_title_size"}' />
+
+            </RadioGroup>
+
+
+            <!-- End Language Design -->
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
